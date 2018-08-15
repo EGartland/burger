@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(63, 164, 247);
+}
+
+.jumbotron {
+    background-color: rgb(249, 252, 119);
+}
+
+.lead {
+    text-align: center;
+    font-family: Impact, Charcoal, sans-serif;
+    color: rgb(63, 164, 247);
+}
+
+.form-control {
+    background-color: rgb(255, 255, 255);
+    color: rgb(63, 164, 247);
+}
+
+.rtc, .eaten {
+    background-color: black;
+}

@@ -1,0 +1,66 @@
+<div class="container">	
+	<div class="jumbotron">
+		<img src="http://4.bp.blogspot.com/__kz6rOvk8qs/TNgwypIbTxI/AAAAAAAAAck/NDeEGhYfwhA/s1600/cow3.jpg" style="margin-left: 20%; width:500px; height:500x;"> 
+		<h1> Come Eat This Sadness! </h1>
+	</div>
+
+<div class="jumbotron">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-1">
+			<div class="panel-panel default">
+				<ol>
+				{{#each burgers}}
+					{{#unless this.devoured}}
+					<li class="list-group-item rtc">
+						<div class="input-group">
+							<p class="lead">{{this.burger_name}} </p>
+							<span class="input-group-btn">
+								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+									<input type="hidden" name="devoured" value="true">
+									<button class="btn btn-default btn-primary btn-lg" type="submit"> DEVOUR IT! </button>
+								</form>
+							</span>
+						</div>
+					</li>
+					{{/unless}}
+				{{/each}}
+			</ol>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 col-md-offset-2">
+			<div class="panel-panel default">
+				<ol class="list-group">
+				{{#each burgers}}
+					{{#if this.devoured}}
+					<li class="list-group-item eaten">
+						<div class="input group"></div>
+						<p class="lead">{{this.burger_name}} </p>
+						<span class="input-group-btn">
+								<form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+									<input type="hidden" name="devoured" value="false">
+									<button class="btn btn-default btn-danger btn-lg" type="submit"> PURGE YOUR SHAME </button>
+								</form>
+							</span>
+					</li>
+					{{/if}}
+				{{/each}}
+				</ol>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-10 col-md-offset-1">
+		<p class="lead"> Add a burger you would like! </p>
+
+		<form class="create-update-form" action="burgers/create" method="POST">
+
+			<div class="form-group">
+				<textarea class="form-control input-md" type="text" name="b_name" rows="1"> </textarea>
+			</div>
+
+			<button class="btn btn-default btn-info btn-lg" type="submit" style="margin-left: 42%;">Submit</button>
+		</form>
+	</div>
+</div>
+	</div>
