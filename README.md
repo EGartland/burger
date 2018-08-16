@@ -25,8 +25,8 @@ Users will be allowed to input burgers they would like to eat, 'devour' them, an
 
 #### Adding a Burger
 
-![Screenshot](https://github.com/EGartland/bamazon/blob/master/assets/customer.gif)
+![Output Sample](https://github.com/EGartland/burger/blob/master/public/assets/img/addBurger.gif)
 
 #### Devouring and Purging a Burger
 
-![Output sample](https://github.com/EGartland/bamazon/blob/master/assets/manager1.gif)
+![Output Sample](https://github.com/EGartland/burger/blob/master/public/assets/img/devourPurge.gif)
